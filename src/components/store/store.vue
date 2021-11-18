@@ -1,0 +1,11 @@
+<template>
+	<div>
+		<h1>Koszyk</h1>
+		<ul>
+			<li>Koszyk</li>
+			<li>Ilość</li>
+			<li>5</li>
+			<li>zł</li>
+		</ul>
+	</div>
+</template>
