@@ -1,8 +1,7 @@
 <template>
 	<div @click="unActiveHamburgerBtn" class="mobileNav visible">
 		<router-link to="/">Home</router-link>
-		<router-link to="/sell">Sell</router-link>
-		<router-link to="/products">Products</router-link>
+
 		<router-link to="/about">About</router-link>
 		<router-link to="/findUs">Find Us</router-link>
 	</div>

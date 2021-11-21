@@ -19,6 +19,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img1,
+			citrus: false,
+			lavender: true,
+			spicy: false,
 		},
 		{
 			id: 2,
@@ -28,7 +31,11 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img2,
+			citrus: true,
+			lavender: false,
+			spicy: false,
 		},
+
 		{
 			id: 3,
 			name: "Consectetur",
@@ -37,6 +44,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img3,
+			citrus: false,
+			lavender: false,
+			spicy: true,
 		},
 		{
 			id: 4,
@@ -46,6 +56,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img4,
+			citrus: true,
+			lavender: false,
+			spicy: true,
 		},
 		{
 			id: 5,
@@ -55,6 +68,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img5,
+			citrus: false,
+			lavender: true,
+			spicy: true,
 		},
 		{
 			id: 6,
@@ -64,6 +80,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img6,
+			citrus: true,
+			lavender: true,
+			spicy: false,
 		},
 		{
 			id: 7,
@@ -73,6 +92,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img7,
+			citrus: true,
+			lavender: true,
+			spicy: true,
 		},
 		{
 			id: 8,
@@ -82,6 +104,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img8,
+			citrus: true,
+			lavender: false,
+			spicy: false,
 		},
 		{
 			id: 9,
@@ -91,6 +116,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img9,
+			citrus: false,
+			lavender: true,
+			spicy: false,
 		},
 		{
 			id: 10,
@@ -100,6 +128,9 @@ const state = {
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img10,
+			citrus: false,
+			lavender: false,
+			spicy: true,
 		},
 	],
 };
@@ -110,7 +141,30 @@ const getters = {
 
 const actions = {};
 
-const mutations = {};
+const mutations = {
+	PRICE_MIN_FILTER: (state, priceMin) => {
+		if (priceMin === "") {
+			priceMin = 0;
+		}
+		console.log("MIN: " + priceMin);
+		const nevState = state.products.filter(
+			(product) => product.price > priceMin
+		);
+
+		return (state.products = nevState);
+	},
+	PRICE_MAX_FILTER: (state, priceMax) => {
+		if (priceMax === "") {
+			priceMax = 100;
+		}
+		console.log("MAX: " + priceMax);
+		const nevState = state.products.filter(
+			(product) => product.price < priceMax
+		);
+
+		return (state.products = nevState);
+	},
+};
 
 export default {
 	state,
