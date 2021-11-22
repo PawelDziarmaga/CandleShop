@@ -59,7 +59,7 @@
 					<h2>{{ product.name }}</h2>
 					<img v-bind:src="product.img" />
 					<h3>{{ product.price }} zł</h3>
-					<button>Buy</button>
+					<button @click="addProduct(product)">Buy</button>
 				</div>
 			</div>
 		</div>
@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
 	name: "Home",
@@ -122,6 +122,10 @@ export default {
 					(product) => product.spicy
 				);
 			}
+		},
+		...mapMutations(["ADD_PRODUCT"]),
+		addProduct: function (product) {
+			this.ADD_PRODUCT(product);
 		},
 	},
 };

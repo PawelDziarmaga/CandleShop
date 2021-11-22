@@ -1,9 +1,11 @@
 <template>
 	<div class="store">
-		<img
-			src="../../assets/shoppingCart/shopping-cart.png"
-			alt="shopping cart"
-		/>
+		<router-link to="/store"
+			><img
+				src="../../assets/shoppingCart/shopping-cart.png"
+				alt="shopping cart"
+		/></router-link>
+
 		<img src="../../assets/padlock/padlockClose.png" alt="padlock close" />
 	</div>
 </template>
