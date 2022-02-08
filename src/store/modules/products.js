@@ -22,18 +22,20 @@ const state = {
 			citrus: false,
 			lavender: true,
 			spicy: false,
+			qty: 0,
 		},
 		{
 			id: 2,
 			name: "Dolor sit amet",
 			price: 40.99,
-			inventory: 27,
+			inventory: 12,
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img2,
 			citrus: true,
 			lavender: false,
 			spicy: false,
+			qty: 0,
 		},
 
 		{
@@ -47,34 +49,37 @@ const state = {
 			citrus: false,
 			lavender: false,
 			spicy: true,
+			qty: 0,
 		},
 		{
 			id: 4,
 			name: "Adipiscing elit",
 			price: 35.99,
-			inventory: 15,
+			inventory: 5,
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img4,
 			citrus: true,
 			lavender: false,
 			spicy: true,
+			qty: 0,
 		},
 		{
 			id: 5,
 			name: "Sed do eiusmod",
 			price: 45.99,
-			inventory: 0,
+			inventory: 1,
 			description:
 				"Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Vitae nunc sed velit dignissim sodales ut eu. Praesent tristique magna sit amet purus gravida quis. Sit amet purus gravida quis blandit turpis. Id eu nisl nunc mi ipsum. Turpis massa sed elementum tempus egestas sed sed risus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. ",
 			img: img5,
 			citrus: false,
 			lavender: true,
 			spicy: true,
+			qty: 0,
 		},
 		{
 			id: 6,
-			name: "Tempor incididunt",
+			name: "Tempor",
 			price: 40.99,
 			inventory: 0,
 			description:
@@ -83,6 +88,7 @@ const state = {
 			citrus: true,
 			lavender: true,
 			spicy: false,
+			qty: 0,
 		},
 		{
 			id: 7,
@@ -95,6 +101,7 @@ const state = {
 			citrus: true,
 			lavender: true,
 			spicy: true,
+			qty: 0,
 		},
 		{
 			id: 8,
@@ -107,6 +114,7 @@ const state = {
 			citrus: true,
 			lavender: false,
 			spicy: false,
+			qty: 0,
 		},
 		{
 			id: 9,
@@ -119,6 +127,7 @@ const state = {
 			citrus: false,
 			lavender: true,
 			spicy: false,
+			qty: 0,
 		},
 		{
 			id: 10,
@@ -131,6 +140,7 @@ const state = {
 			citrus: false,
 			lavender: false,
 			spicy: true,
+			qty: 0,
 		},
 	],
 };

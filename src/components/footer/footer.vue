@@ -9,7 +9,7 @@
 			<Cooperation />
 		</div>
 		<div class="footer__third-floor">
-			<h5>©2021 Wszelkie prawa zastrzeżone</h5>
+			<h5>©2021 All rights reserved</h5>
 		</div>
 	</div>
 </template>

@@ -1,6 +1,6 @@
 <template>
 	<div class="footer__adress">
-		<h1>Adres</h1>
+		<h1>Address</h1>
 		<ul>
 			<li>Lorem ipsum dolor</li>
 			<li>ul Excepteur sint 5</li>
@@ -15,7 +15,7 @@
 	padding: 0 10% 2vh 10%;
 
 	h1 {
-		border-bottom: 5px solid #da0037;
+		border-bottom: 5px solid #ffc2b4;
 		margin-bottom: 3vh;
 		@media screen and (max-width: 500px) {
 			font-size: 30px;

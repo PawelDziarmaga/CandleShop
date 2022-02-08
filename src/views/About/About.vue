@@ -39,9 +39,27 @@ export default {
 .about {
 	text-align: justify;
 	margin: 3vh 20%;
+	@media screen and (max-width: 900px) {
+		margin: 3vh 10%;
+	}
+	@media screen and (max-width: 600px) {
+		margin: 3vh 5%;
+	}
 	p {
 		margin: 3vh 0;
 		font-size: 25px;
+		border-bottom: 5px solid #ffc2b4;
+		padding-bottom: 3vh;
+		@media screen and (max-width: 600px) {
+			font-size: 20px;
+		}
+		@media screen and (max-width: 400px) {
+			font-size: 15px;
+		}
+
+		&:last-child {
+			border-bottom: 0px solid #ffc2b4;
+		}
 	}
 }
 </style>

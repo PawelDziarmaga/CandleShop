@@ -1,6 +1,6 @@
 <template>
 	<div class="footer__social">
-		<h1>Społeczność</h1>
+		<h1>Social</h1>
 		<ul>
 			<li class="facebook">
 				<img src="../../assets/social/facebook.png" alt="facebook" />

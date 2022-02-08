@@ -1,18 +1,5 @@
 const state = {
-	productsInStoor: [
-		{
-			id: 9,
-			name: "Magna aliqua",
-			price: 45.99,
-			inventory: 3,
-		},
-		{
-			id: 10,
-			name: "Commodo viverra",
-			price: 40.99,
-			inventory: 5,
-		},
-	],
+	productsInStoor: [],
 };
 
 const getters = {
@@ -21,15 +8,39 @@ const getters = {
 
 const mutations = {
 	ADD_PRODUCT: (state, link) => {
-		console.log(link);
+		/*Check if the product is in the shopping cart*/
+		let index = state.productsInStoor.findIndex(
+			(element) => element.name === link.name
+		);
+
+		/*If not, add the product to the shopping cart*/
+		if (index < 0) {
+			state.productsInStoor.push(link);
+		}
+		/*Find the product index*/
+		index = state.productsInStoor.findIndex(
+			(element) => element.name === link.name
+		);
+
+		/*Adds and removes items to keep the cart counter working*/
+		state.productsInStoor.splice(index, 1);
 		state.productsInStoor.push(link);
+
+		/*Add the product to the cart*/
+		let newQty = state.productsInStoor[index].qty + 1;
+		state.productsInStoor[index].qty = newQty;
 	},
 	REMOVE_PRODUCT: (state, link) => {
-		const index = state.productsInStoor.findIndex(
+		let index = state.productsInStoor.findIndex(
 			(product) => product.id === link
 		);
 
-		return state.productsInStoor.splice(index, 1);
+		if (state.productsInStoor[index].qty > 1) {
+			let newQty = state.productsInStoor[index].qty - 1;
+			state.productsInStoor[index].qty = newQty;
+		} else {
+			return state.productsInStoor.splice(index, 1);
+		}
 	},
 };
 const actions = {

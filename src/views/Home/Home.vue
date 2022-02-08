@@ -59,7 +59,24 @@
 					<h2>{{ product.name }}</h2>
 					<img v-bind:src="product.img" />
 					<h3>{{ product.price }} zł</h3>
-					<button @click="addProduct(product)">Buy</button>
+					<div class="product-section__products__product__cart">
+						<p>
+							Availability:
+							{{ product.inventory - product.qty }}
+						</p>
+						<p>In Your cart: {{ product.qty }}</p>
+					</div>
+					<button
+						@click="
+							if (product.inventory - product.qty > 0) {
+								addProduct(product);
+							}
+						"
+					>
+						{{
+							product.inventory - product.qty > 0 ? "buy" : "none"
+						}}
+					</button>
 				</div>
 			</div>
 		</div>
@@ -71,7 +88,10 @@ import { mapGetters, mapMutations } from "vuex";
 
 export default {
 	name: "Home",
-	computed: mapGetters({ products: "allProducts" }),
+	computed: mapGetters(
+		{ products: "allProducts" },
+		{ productsInStoor: "allProductsInStoor" }
+	),
 	data() {
 		return {
 			filterProducts: this.products,
@@ -104,7 +124,7 @@ export default {
 
 			if (this.available) {
 				this.filterProducts = this.filterProducts.filter(
-					(product) => product.inventory > 0
+					(product) => product.inventory - product.qty > 0
 				);
 			}
 			if (this.citrus) {
@@ -141,13 +161,28 @@ export default {
 	.filtr-section {
 		box-shadow: 0 0 5px #444444;
 		width: 250px;
-		height: 50vh;
+		height: 65vh;
 		margin: 10px;
+		@media screen and (max-height: 1000px) {
+			height: 80vh;
+		}
+		@media screen and (max-height: 800px) {
+			height: 100vh;
+		}
+		@media screen and (max-height: 600px) {
+			height: 120vh;
+		}
+		@media screen and (max-height: 500px) {
+			height: 150vh;
+		}
+		@media screen and (max-height: 400px) {
+			height: auto;
+		}
 		&__header {
 			font-size: 50px;
 			margin: 20px 0;
 			text-align: center;
-			background-color: #ededed;
+			background-color: #9dbeb9;
 		}
 		&__price {
 			margin: 20px 0;
@@ -219,14 +254,15 @@ export default {
 			width: 80%;
 			display: block;
 			margin: 0 auto;
-			color: #444444;
+			color: #194350;
 			font-family: "Comfortaa", cursive;
-			border: 5px solid #444444;
+			background-color: #ffc2b4;
+			border: 8px solid #ededed;
+			transition: 0.1s ease-out;
 
 			&:hover {
-				color: #ededed;
-				border: 5px solid #ededed;
-				background-color: #444444;
+				border: 8px solid #ffc2b4;
+				background-color: #ededed;
 			}
 		}
 	}
@@ -242,36 +278,36 @@ export default {
 
 			&__product {
 				width: 500px;
-				height: 550px;
+				height: 600px;
 				margin: 10px;
 				box-shadow: 0 0 5px #444444;
 				@media screen and (max-width: 1850px) {
 					width: 400px;
-					height: 500px;
+					height: 550px;
 				}
 				@media screen and (max-width: 1550px) {
 					width: 300px;
-					height: 420px;
+					height: 470px;
 				}
 				@media screen and (max-width: 1200px) {
 					width: 400px;
-					height: 470px;
+					height: 520px;
 				}
 				@media screen and (max-width: 1100px) {
 					width: 300px;
-					height: 420px;
+					height: 470px;
 				}
 				@media screen and (max-width: 900px) {
 					width: 200px;
-					height: 350px;
+					height: 400px;
 				}
 				@media screen and (max-width: 660px) {
 					width: 100%;
-					height: 450px;
+					height: 500px;
 				}
 				@media screen and (max-width: 550px) {
 					width: 100%;
-					height: 380px;
+					height: 450px;
 				}
 				h2 {
 					text-align: center;
@@ -279,7 +315,7 @@ export default {
 					font-size: 40px;
 					margin: 20px 0;
 
-					background-color: #ededed;
+					background-color: #9dbeb9;
 					@media screen and (max-width: 1550px) {
 						font-size: 30px;
 					}
@@ -292,27 +328,46 @@ export default {
 					display: block;
 					margin: 0 auto;
 					box-shadow: 0 0 5px #ededed;
+					border-radius: 5px;
 				}
 				h3 {
 					text-align: center;
+					font-size: 30px;
 					padding: 30px;
+					color: #194350;
+					text-shadow: 0px 0px 15px #ffc2b4;
 				}
 				button {
-					background-color: #ededed;
 					font-size: 30px;
 					height: 50px;
 					text-align: center;
 					width: 80%;
 					display: block;
 					margin: 0 auto;
-					color: #444444;
+					color: #194350;
 					font-family: "Comfortaa", cursive;
-					border: 5px solid #444444;
-
+					background-color: #ffc2b4;
+					border: 8px solid #ededed;
+					transition: 0.1s ease-out;
 					&:hover {
-						color: #ededed;
-						border: 5px solid #ededed;
-						background-color: #444444;
+						border: 8px solid #ffc2b4;
+						background-color: #ededed;
+					}
+				}
+				&__cart {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					padding-bottom: 10px;
+					@media screen and (max-width: 900px) {
+						display: block;
+					}
+					p {
+						text-align: center;
+						width: 50%;
+						@media screen and (max-width: 900px) {
+							width: 100%;
+						}
 					}
 				}
 			}

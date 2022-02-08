@@ -20,6 +20,10 @@ export default {
 	iframe {
 		width: 600px;
 		height: 450px;
+		@media screen and (max-width: 700px) {
+			width: 90%;
+			height: 450px;
+		}
 	}
 }
 </style>
