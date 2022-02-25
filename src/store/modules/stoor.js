@@ -39,6 +39,7 @@ const mutations = {
 			let newQty = state.productsInStoor[index].qty - 1;
 			state.productsInStoor[index].qty = newQty;
 		} else {
+			state.productsInStoor[index].qty = 0;
 			return state.productsInStoor.splice(index, 1);
 		}
 	},
